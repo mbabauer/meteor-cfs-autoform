@@ -1,6 +1,6 @@
 Hooks = {
   beforeInsert: function (doc) {
-    var self = this, template = this.template;
+    var self = this, template = this.template ? this.template : Template.instance();
     if (!AutoForm.validateForm(this.formId)) {
       return false;
     }
